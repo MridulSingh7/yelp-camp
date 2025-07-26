@@ -7,6 +7,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for pure Express'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

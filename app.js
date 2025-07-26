@@ -156,9 +156,9 @@ const validateReview = (req,res,next)=>{
 }
 
 
-app.listen(3000,()=>{
-    console.log("listening on port 3000") 
-})
+// app.listen(3000,()=>{
+//     console.log("listening on port 3000") 
+// })
 
 //we can set global elements here, yaha jo jo set karoge will be accesible everywhere
 app.use((req,res,next)=>{
