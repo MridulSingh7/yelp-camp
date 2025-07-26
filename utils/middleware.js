@@ -1,7 +1,7 @@
-const {campgroundSchema, reviewSchema} = require('./schemas.js')//thse are joi schemas,validates schemas from req.body
-const ExpressErrors = require('./utils/ExpressErrors.js');
-const campground = require('./models/campground.js');
-const Review = require('./models/review.js');
+const {campgroundSchema, reviewSchema} = require('../schemas.js')//thse are joi schemas,validates schemas from req.body
+const ExpressErrors = require('./ExpressErrors.js');
+const campground = require('../models/campground.js');
+const Review = require('../models/review.js');
 
 
 module.exports.isLoggedIn = (req, res, next) => {
