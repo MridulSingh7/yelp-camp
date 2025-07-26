@@ -18,10 +18,6 @@ router.route('/login')
 router.route('/logout')
 .get(users.logoutUser)
 
-
-router.get('/favicon.ico', (req, res) => res.status(204).end());
-router.get('/dfsmfodmsf', (req, res) => res.status(204).end());
-
 module.exports = router;
 
 

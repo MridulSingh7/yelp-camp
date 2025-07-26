@@ -13,8 +13,4 @@ router.route("/")
 router.delete('/:reviewId', isLoggedIn, isReviewAuthor, catchAsync(reviews.deleteReview))
 
 
-
-router.get('/favicon.ico', (req, res) => res.status(204).end());
-router.get('/dfsmfodmsf', (req, res) => res.status(204).end());
-
 module.exports = router;

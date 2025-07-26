@@ -26,8 +26,4 @@ router.route('/:id/edit')
 .get(isLoggedIn,isAuthor,catchAsync(campgrounds.renderEditForm));
 
 
-router.get('/favicon.ico', (req, res) => res.status(204).end());
-router.get('/dfsmfodmsf', (req, res) => res.status(204).end());
-
-
 module.exports = router;
