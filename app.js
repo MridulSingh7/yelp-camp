@@ -184,4 +184,6 @@ app.use((err, req, res, next) => {
 
 // npm install passport passport-local passport-local-mongoose
 
-module.exports = app; //exporting the app so that it can be used in index.js
+module.exports = (req, res) => {
+    app(req, res);
+  };
