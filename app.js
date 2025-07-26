@@ -44,7 +44,7 @@ app.use(sanitizeV5({ replaceWith: '_' }));
 
 
 const store = MongoStore.create({
-    mongoUrl: dbUrl,
+    mongoUrl: DB_URL,
     collectionName:'session',
     touchAfter: 24 * 60 * 60,
     crypto: {
