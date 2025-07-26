@@ -160,6 +160,7 @@ const validateReview = (req,res,next)=>{
 //     console.log("listening on port 3000") 
 // })
 
+
 //we can set global elements here, yaha jo jo set karoge will be accesible everywhere
 app.use((req,res,next)=>{
     res.locals.currentUser = req.user;
@@ -188,3 +189,5 @@ app.use((err, req, res, next) => {
 })
 
 // npm install passport passport-local passport-local-mongoose
+
+module.exports = app; //exporting the app so that it can be used in index.js
