@@ -40,7 +40,7 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(sanitizeV5({ replaceWith: '_' }));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 const store = MongoStore.create({
@@ -132,7 +132,6 @@ passport.deserializeUser(User.deserializeUser());
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 //method override for handling put request as post request because forms only accept get and post
-app.use(express.static('public'));
 //this is the middleware function we created from the joi step 2 for joi validation
 const validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
