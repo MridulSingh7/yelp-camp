@@ -9,11 +9,11 @@ const {storeReturnTo} = require('../utils/middleware.js');
 
 router.route('/register')
 .get(users.renderRegister)
-.post(storeReturnTo, catchAsync(users.registerNewUser));
+.post(catchAsync(users.registerNewUser));
 
 router.route('/login')
 .get(users.renderLoginPage)
-.post(storeReturnTo, passport.authenticate('local', {failureFlash:true, failureRedirect:'/login'}),users.loginUser);
+.post(passport.authenticate('local', {failureFlash:true, failureRedirect:'/login'}),users.loginUser);
 
 router.route('/logout')
 .get(users.logoutUser)
