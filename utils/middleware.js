@@ -14,15 +14,6 @@ module.exports.isLoggedIn = (req, res, next) => {
 };
 
 
-// middleware to redirect back to after the page where we wanted to go but needed to sign in first
-module.exports.storeReturnTo = (req, res, next) => {
-    if (req.session.returnTo) {
-        res.locals.returnTo = req.session.returnTo;
-    }
-    next();
-}
-
-
 module.exports.validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
     //destructured the error from here
