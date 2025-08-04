@@ -28,7 +28,7 @@ module.exports.createNewCampground = async (req, res)=>{
     console.log(camp);
     await camp.save();
     req.flash('success', 'Successfully made a new campground!');
-    res.redirect(`/campgrounds/${camp._id}`)
+    res.redirect(`/campgrounds`);
 
 }
 
@@ -82,8 +82,7 @@ module.exports.editCampground = async(req,res)=>{
 
     await camp.save();
     req.flash('success', 'successfully updated the campground')
-    res.redirect(`/campgrounds/${camp._id}`);
-
+    res.redirect(`/campgrounds`);
 }
 
 module.exports.deleteCampground = async (req,res)=>{
