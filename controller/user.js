@@ -13,7 +13,7 @@ try{
     req.login(registeredUser, err=>{
         if(err) return next(err);
         req.flash('success', 'Welcome to YelpCamp!');
-        res.redirect('/campgrounds');
+        res.redirect('/');
     })
     
 }catch(e){
@@ -28,7 +28,7 @@ module.exports.renderLoginPage = (req,res)=>{
 
 module.exports.loginUser = async(req,res)=>{
     req.flash("success", 'welcome back')
-  res.redirect('/campgrounds');
+  res.redirect('/');
     
 }
 module.exports.logoutUser =  (req, res, next) => {
